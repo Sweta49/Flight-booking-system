@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Flight Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Flight Booking System</h1>
+<main>
+    <section id="Flight-selection">
+        <h2>Select a Flight</h2>
+        <ul>
+            <li>
+                <h3>Yeti airlines </h3>
+                <p>Flight times: 7:00 AM, 3:00 PM, 7:00 PM</p>
+                <button onclick="bookTicket(1)">Book Now</button>
+            </li>
+            <li>
+                <h3>Shree airlines</h3>
+                <p>Flight times: 8:00 AM, 4:00 PM, 10:00 AM</p>
+                <button onclick="bookTicket(2)">Book Now</button>
+            </li>
+            <li>
+                 <h3>Buddha airlines</h3>
+                <p>Flight times: 9:00 AM, 3:00 PM, 7:00 PM</p>
+                <button onclick="bookTicket(3)">Book Now</button>
+            </li>
+            <li>
+                <h3>Shaurya airlines</h3>
+                <p>Flight times: 11:00 AM, 2:45 PM, 12:30 PM</p>
+                <button onclick="bookTicket(4)">Book Now</button>
+            </li>
+            
+            <!-- Add Flight options here -->
+        </ul>
+    </section>
+    
+    <section id="booking-form" style="display: none;">
+        <h2>Book Tickets</h2>
+        <form id="booking-form" action="confirm_booking.php" method="POST">
+            <input type="hidden" id="flight-id" name="flight-id" value="">
+    
+        <!-- Departure Location -->
+        <label for="departure">Departure Location:</label>
+        <input type="text" id="departure" name="departure" required>
+        
+
+        <!-- Arrival Location -->
+        <label for="arrival">Arrival Location:</label>
+        <input type="text" id="arrival" name="arrival" required>
+        
+
+        <!-- Departure Date -->
+        <label for="departure-date">Departure Date:</label>
+        <input type="date" id="departure-date" name="departure-date" required>
+
+        <!-- Passenger Information -->
+        <label for="passengers">Number of Passengers:</label>
+        <input type="number" id="passengers" name="passengers" min="1" required>
+        
+        <!-- Email Information -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!--Personal Information-->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+           <!-- Submit Button -->
+        <button type="submit" >confirm_booking</button>
+    </form>
+    </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
